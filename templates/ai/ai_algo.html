@@ -1,0 +1,323 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+
+
+    <style>
+        .heading1{
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+
+            font-size: xx-large;
+            padding-top: 20px;
+        }
+        .heading2{
+            font-family: "Lora", serif;
+            font-optical-sizing: auto;
+            font-weight: 800;
+            font-style: normal;
+
+            font-size: xx-large;
+        }
+        .heading3{
+            font-family: "Lora", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+
+            font-size: x-large;
+        }
+        .heading3b{
+            font-family: "Lora", serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
+
+            font-size: x-large;
+            padding-top: 10px;
+        }
+        .info{
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+
+            font-size: 900;
+            line-height: 40px;
+            text-justify: inter-word;
+        }
+
+        .home{
+            display: flex;
+
+        }
+
+        .leftSideBar{
+            width: 20%;
+        }
+        .center{
+            width: 60%;
+        }
+        .rightSideBar{
+            width: 20%;
+        }
+        .tr{
+            margin-top: 50%;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="home">
+        <div class="leftSideBar">
+
+        </div>
+
+        <div class="center">
+
+
+            <h1 class="heading1"><u>Most Common Artificial Intelligence algorithms</u></h1>
+
+            <div class="BFS">
+                <h2 class="heading2 mt-5">1>. Breadth First Search (B.F.S.):</h2>
+                <p class="info mt-3 pl-0">Breadth-First Search (BFS) is a graph traversal algorithm that explores all nodes at the present depth level before moving on to nodes at the next depth level. It systematically visits all nodes in a level-order fashion, using a queue to manage the nodes to be explored. BFS starts at the root node (or a chosen start node) and explores all its neighboring nodes before moving on to their neighbors, ensuring that all nodes at distance 𝑑 d from the start are visited before nodes at distance 𝑑 + 1 .</p>
+
+                <h3 class="heading3b mt-3 mb-2 pl-7">* <u>Use cases:</u></h3>
+                <ul class="pl-7">
+                    <li class="info">Finding the shortest path in an unweighted graph.</li>
+                    <li class="info">Solving puzzles like the 8-puzzle problem.</li>
+                    <li class="info">Network broadcasting.</li>
+                </ul>
+
+                <h3 class="heading3b mt-3 mb-2 pl-7">* <u>Advantages</u></h3>
+                <ul class="pl-7">
+                    <li class="info"><b>Optimal for Unweighted Graphs:</b>AI involves creating intelligent agents or systems that can mimic human abilities.</li>
+                    <li class="info"><b>Complete:</b>Will always find a solution if one exists.</li>
+                    <li class="info"><b>Systematic:</b>Explores all nodes level by level.</li>
+                </ul>
+
+                <h3 class="heading3b mt-3 mb-2 pl-7">* <u>Disadvantages</u></h3>
+                <ul class="pl-7">
+                    <li class="info"><b>Memory Intensive: </b>Can use a lot of memory due to storing all nodes at the current depth level.</li>
+                    <li class="info"><b>Slow for Large Graphs: </b>May be slower compared to other algorithms in large graphs.</li>
+                    <li class="info"><b>Not Ideal for Deep Graphs: </b>Can be inefficient if the solution is far from the root.</li>
+                </ul>
+            </div>
+
+
+            <div class="DFS mt-5">
+                <h2 class="heading2 mt-5">2>. Depth First Search (D.F.S.):</h2>
+                <p class="info mt-3 pl-0">Depth-First Search (DFS) is a graph traversal algorithm that explores as far down a branch of the graph as possible before backtracking. It uses a stack (either explicitly or through recursion) to keep track of the path being explored. DFS starts at the root node (or a chosen start node) and explores as deep as possible along each branch before backtracking. This approach allows DFS to reach a node’s deepest descendant before moving to the next sibling node.</p>
+
+                <h3 class="heading3b mt-3 mb-2 pl-7">* <u>Use cases:</u></h3>
+                <ul class="pl-7">
+                    <li class="info">Pathfinding in mazes or puzzles.</li>
+                    <li class="info">Topological sorting in directed graphs.</li>
+                    <li class="info">Cycle detection in graphs.</li>
+                </ul>
+
+                <h3 class="heading3b mt-3 mb-2 pl-7">* <u>Advantages:</u></h3>
+                <ul class="pl-7">
+                    <li class="info"><b>Low memory usage: </b>Uses less memory compared to BFS.</li>
+                    <li class="info"><b>Simple Implementation: </b>Easy to implement using recursion.</li>
+                    <li class="info"><b>Can be More Efficient: </b>Can be more efficient in certain scenarios, especially if the solution is deep.</li>
+                </ul>
+
+                <h3 class="heading3b mt-3 mb-2 pl-7">* <u>Disadvantages:</u></h3>
+                <ul class="pl-7">
+                    <li class="info"><b>Not Optimal: </b>Does not guarantee the shortest path in unweighted graphs.</li>
+                    <li class="info"><b>Not complete: </b>May not find a solution if the graph is infinite.</li>
+                    <li class="info"><b>Can get stuck: </b>May get stuck in an infinite loop if the graph contains cycles and is not properly handled.</li>
+                </ul>
+
+            </div>
+
+
+            <div class="A_star ">
+                <h2 class="heading2 mt-5">3>. A* Search(A-star Search):</h2>
+                <p class="info mt-3 pl-0"> The A* (A-star) search algorithm is an informed search algorithm that finds the shortest path from a start node to a goal node by combining the cost to reach the node (known as the path cost) and an estimate of the cost to reach the goal (known as the heuristic). A* uses a priority queue to explore nodes based on the sum of the path cost and heuristic value (often denoted as 
+                𝑓(𝑛) = 𝑔(𝑛) + ℎ(𝑛) ) . It is designed to be both optimal and complete, provided that the heuristic function used is admissible (i.e., it never overestimates the true cost to reach the goal).</p>
+
+                <h3 class="heading3b mt-3 mb-2 pl-7">* <u>Use cases:</u></h3>
+                    <ul class="pl-7">
+                        <li class="info">Pathfinding in maps (e.g., GPS navigation).</li>
+                        <li class="info">Game AI for character movement.</li>
+                        <li class="info">Robotics and autonomous systems.</li>
+                    </ul>
+
+                <h3 class="heading3b mt-3 mb-2 pl-7">* <u>Advantages</u></h3>
+                <ul class="pl-7">
+                    <li class="info"><b>Optimal and Complete: </b>If the heuristic is admissible, it guarantees the shortest path.</li>
+                    <li class="info"><b>Heuristic Optimization: </b>Uses heuristics to efficiently find the path.</li>
+                    <li class="info"><b>Flexible: </b>Can be adapted with different heuristics for various problems.</li>
+                </ul>
+
+                <h3 class="heading3b mt-3 mb-2 pl-7">* <u>Disadvantages</u></h3>
+                <ul class="pl-7">
+                    <li class="info"><b>Memory Usage: </b>Can use a lot of memory due to maintaining the open and closed lists.</li>
+                    <li class="info"><b>Heuristic Dependent: </b>Performance depends on the quality of the heuristic.</li>
+                    <li class="info"><b>Complexity: </b>More complex to implement compared to BFS and DFS.</li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div class="rightSideBar">
+            <div class="aiIntro">
+                <img src="./static/ai/algo/bfs.jpg" alt="image" style="padding-top: 20vh; padding-left: 2vw; padding-right: 1vw;">
+            </div>
+            <div class="aiIntro">
+                <img src="./static/ai/algo/dfs.jpg" alt="image" style="padding-top: 100vh; padding-left: 2vw; padding-right: 1vw;">
+            </div>
+            <div class="aiIntro">
+                <img src="./static/ai/algo/a_star.png" alt="image" style="padding-top: 80vh; padding-left: 2vw; padding-right: 1vw;">
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div class="tail mt-5">
+      <hr>
+        <footer class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+              <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                  </svg>
+                  <span class="ml-3 text-xl">Info</span>
+                </a>
+                <p class="mt-2 text-sm text-gray-500">about Learn and score</p>
+              </div>
+              <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                  <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">A.I.</h2>
+                  <nav class="list-none mb-10">
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800" href="/aiIntro">Ai intro</a>
+                    </li>
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800" href="/aiAlgo">A.I. Algo</a>
+                    </li>
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                    </li>
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                    </li>
+                  </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                  <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                  <nav class="list-none mb-10">
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">First Link</a>
+                    </li>
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+                    </li>
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                    </li>
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                    </li>
+                  </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                  <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                  <nav class="list-none mb-10">
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">First Link</a>
+                    </li>
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+                    </li>
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                    </li>
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                    </li>
+                  </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                  <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                  <nav class="list-none mb-10">
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">First Link</a>
+                    </li>
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+                    </li>
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                    </li>
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                    </li>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-100">
+              <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
+                  <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@knyttneve</a>
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                  <a class="text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </footer>
+    </div>
+</body>
+</html>
+
+{% endblock %}
