@@ -1,6 +1,6 @@
 {
     "version": 2,
     "builds": [
-      { "src": "/home/kunalpathak/Projects/RealtimeProjects/infoBlogs" }
+      { "src": "/home/kunalpathak/Projects/RealtimeProjects/infoBlogs", "use":"@vercel/python"}
     ]
   }
