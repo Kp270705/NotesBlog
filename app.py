@@ -37,3 +37,14 @@ def ai_algo():
 
 # dbms routes:
 
+@app.route('/dbmsText')
+def dbmsText():
+    return render_template('dbms/dbms_selection.html')
+
+@app.route('/dbmsIntro')
+def dbms_intro():
+    return render_template('dbms/dbms_introduction.html')
+
+@app.route('/dbmsIntro2')
+def dbms_intro2():
+    return render_template('dbms/dbms_introduction2.html')

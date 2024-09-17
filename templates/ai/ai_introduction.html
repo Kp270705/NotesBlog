@@ -3,367 +3,193 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DBMS Overview</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-
     <style>
-        .heading1{
+        body {
             font-family: "Poppins", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-
-            font-size: xx-large;
-            padding-top: 20px;
-        }
-        .heading2{
+            background-color: #f9f9f9;
+            color: #333;
+          }
+          
+          h1, h2, h3 {
             font-family: "Lora", serif;
-            font-optical-sizing: auto;
-            font-weight: 800;
-            font-style: normal;
-
-            font-size: xx-large;
-        }
-        .heading3{
-            font-family: "Lora", serif;
-            font-optical-sizing: auto;
-            font-weight: 600;
-            font-style: normal;
-
-            font-size: x-large;
-        }
-        .info{
-            font-family: "Raleway", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-style: normal;
-
-            font-size: 900;
-            line-height: 40px;
+          }
+          
+          h1 {
+            font-size: 2.5rem;
+            color: #1a202c;
+            margin-bottom: 20px;
+            white-space: normal;
+            word-spacing: -0.05em;
+            line-height: 1.2;
         }
 
-        .home{
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                word-spacing: normal;
+            }
+        }
+          
+          h2 {
+            font-size: 2rem;
+            margin-top: 30px;
+            color: #2c5282;
+          }
+          
+          h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+          }
+          
+          p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin: 10px 0;
+          }
+          li{
+            margin-top: 10px;
+          }
+          
+          .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: justify;
+          }
+          
+          .section {
             display: flex;
-
+            justify-content: space-between;
+            margin-top: 10vh;
         }
 
-        .leftSideBar{
-            width: 20%;
+        .section .content {
+            width: 65%;
+            line-height: 30px;
         }
-        .center{
-            width: 60%;
+
+        .section .media img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            padding-top: 10vh;
         }
-        .rightSideBar{
-            width: 20%;
+
+        .section .media {
+            width: 30%;
+            text-align: center;
         }
-        .tr{
-            margin-top: 50%;
+
+        .footer {
+            margin-top: 50px;
+            background-color: #1a202c;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #63b3ed;
         }
 
     </style>
-
-
 </head>
+
 <body>
-    <div class="home">
-        <div class="leftSideBar">
 
-        </div>
+    <div class="container">
+        <h1> Introduction to Artificial Intelligence </h1>
 
-        <div class="center">
-            <h1 class="heading1"><u>Introduction to Artificial Intelligence</u></h1>
-            <div class="overview">
-                <h2 class="heading2 mt-5">Overview</h2>
-                <p class="info mt-3">Artificial Intelligence (AI) is the field of computer science focused on creating systems capable of performing tasks that typically require human intelligence. These tasks include learning, reasoning, problem-solving, perception, and language understanding. AI aims to develop machines that can simulate human cognitive functions to solve complex problems, adapt to new situations, and make decisions.</p>
-            </div>
-            <div class="keypoints mt-5">
-                <h2 class="heading2">Key Points</h2>
+        <div class="section">
+            <div class="content">
+                <h2>Overview</h2>
+                <p>Artificial Intelligence (AI) is the field of computer science focused on creating systems capable of performing tasks that typically require human intelligence. These tasks include learning, reasoning, problem-solving, perception, and language understanding. AI aims to develop machines that can simulate human cognitive functions to solve complex problems, adapt to new situations, and make decisions.</p>
+                
+                <h3>Key Points:</h3>
                 <ul>
-                    <li class="mt-3 info"><b>Definition:</b>AI involves creating intelligent agents or systems that can mimic human abilities.</li>
-                    <li class="mt-3 info"><b>Goal:</b>To develop machines that can perform tasks requiring human-like thinking.</li>
-                    <li class="mt-3 info"><b>Applications:</b>Includes robotics, natural language processing, computer vision, and expert systems.</li>
+                    <li><b>Definition:</b>AI involves creating intelligent agents or systems that can mimic human abilities.</li>
+                    <li><b>Goal:</b>To develop machines that can perform tasks requiring human-like thinking.</li>
+                    <li><b>Applications:</b>Includes robotics, natural language processing, computer vision, and expert systems.</li>
                 </ul>
-
-            </div>
-            <div class="typesOfAi mt-5">
-                <h2 class="heading2">Types of A.I.</h2>
-                <ol>
-                    <li class="mt-5">
-                        <h2 class="heading3 ml-3">1>.Narrow A.I.</h2>
-                        <div class="NarrowAi">
-                            <table class="mt-3">
-                                <ul>
-                                    <li>
-                                        <tr class="info tr">
-                                            <td class="pl-5"><b>Definition:</b></td>
-                                            <td class="pl-6">AI systems designed and trained to handle a specific task or a narrow range of tasks.</td>
-                                        </tr>
-                                    </li>
-                                    <li>
-                                        <tr class="info tr">
-                                            <td class="pl-5"><b>Capabilities:</b></td>
-                                            <td class="pl-6">Operates under predefined rules and cannot perform beyond its programmed limits.</td>
-                                        </tr>
-                                    </li>
-                                    <li>
-                                        <tr class="info tr">
-                                            <td class="pl-5"><b>Examples:</b></td>
-                                            <td class="pl-6">Virtual assistants (e.g., Siri, Alexa), recommendation systems (e.g., Netflix suggestions), and image recognition software.</td>
-                                        </tr>
-                                    </li>
-                                    <li> 
-                                        <tr class="info tr">
-                                            <td class="pl-5"><b>Scope:</b></td>
-                                            <td class="pl-6">Limited to particular applications with no general understanding or awareness.</td>
-                                        </tr>
-                                    </li>
-                                    <li>
-                                        <tr class="info tr">
-                                            <td class="pl-5"><b>Development:</b></td>
-                                            <td class="pl-6">Currently the most common type of AI, used in many everyday applications.</td>
-                                        </tr>
-                                    </li>
-                                </ul>
-                            </table>
-                        </div>
-                    </li>
-                    <li class="mt-5">
-                        <h2 class="heading3 ml-3">2>.General A.I.(AGI - Artificial General Intelligence)</h2>
-                        <div class="GeneralAi">
-                            <table class="mt-3">
-                                <ul>
-                                    <li>
-                                        <tr class="info tr">
-                                            <td class="pl-5"><b>Definition:</b></td>
-                                            <td class="pl-6">AI systems with general cognitive abilities that can understand, learn, and apply knowledge across a broad range of tasks, similar to human intelligence.</td>
-                                        </tr>
-                                    </li>
-                                    <li>
-                                        <tr class="info tr">
-                                            <td class="pl-5"><b>Capabilities:</b></td>
-                                            <td class="pl-6"> Can perform any intellectual task that a human can, including reasoning, problem-solving, and understanding complex concepts.
-                                            </td>
-                                        </tr>
-                                    </li>
-                                    <li>
-                                        <tr class="info tr">
-                                            <td class="pl-5"><b>Examples:</b></td>
-                                            <td class="pl-6">No existing systems yet; theoretical in nature.
-                                            </td>
-                                        </tr>
-                                    </li>
-                                    <li> 
-                                        <tr class="info tr">
-                                            <td class="pl-5"><b>Scope:</b></td>
-                                            <td class="pl-6">Broad and adaptable, with the ability to transfer knowledge across different domains.</td>
-                                        </tr>
-                                    </li>
-                                    <li>
-                                        <tr class="info tr">
-                                            <td class="pl-5"><b>Development:</b></td>
-                                            <td class="pl-6"> Still under research, with no practical implementations as of now.</td>
-                                        </tr>
-                                    </li>
-                                </ul>
-                            </table>
-                        </div>
-                    </li>
-                    <li class="mt-5">
-                        <h2 class="heading3 ml-3">3>.Strong A.I.(Full A.I.)</h2>
-                        <div class="StrongAi">
-                            <table class="mt-3">
-                                <ul>
-                                    <li>
-                                        <tr class="info tr">
-                                            <td class="pl-5"><b>Definition:</b></td>
-                                            <td class="pl-6">AI systems with consciousness, self-awareness, and understanding akin to human beings.
-                                            </td>
-                                        </tr>
-                                    </li>
-                                    <li>
-                                        <tr class="info tr">
-                                            <td class="pl-5"><b>Capabilities:</b></td>
-                                            <td class="pl-6"> Can exhibit human-like understanding, reasoning, and emotional responses.
-                                            </td>
-                                        </tr>
-                                    </li>
-                                    <li>
-                                        <tr class="info tr">
-                                            <td class="pl-5"><b>Examples:</b></td>
-                                            <td class="pl-6">Hypothetical and not yet realized; often featured in science fiction.
-                                            </td>
-                                        </tr>
-                                    </li>
-                                    <li> 
-                                        <tr class="info tr">
-                                            <td class="pl-5"><b>Scope:</b></td>
-                                            <td class="pl-6">Includes not only solving tasks but also possessing a level of self-awareness and subjective experience.</td>
-                                        </tr>
-                                    </li>
-                                    <li>
-                                        <tr class="info tr">
-                                            <td class="pl-5"><b>Development:</b></td>
-                                            <td class="pl-6"> An advanced concept still debated among researchers and philosophers, with no current technological realization.
-                                            </td>
-                                        </tr>
-                                    </li>
-                                </ul>
-                            </table>
-                        </div>
-                    </li>
-                </ol>
-
-
+            
             </div>
 
-        </div>
-
-        <div class="rightSideBar">
-            <div class="aiIntro">
-                <img src="./static/ai/intro/aiIntro.webp" alt="image" style="padding-top: 20vh; padding-left: 2vw; padding-right: 1vw;">
-            </div>
-            <div class="ai_key_points">
-                <img src="./static/ai/intro/ai_key_points.jpeg" alt="image" height="150px" width="300px" style="padding-top: 15vh; padding-left: 2vw; padding-right: 1vw;">
-            </div>
-            <div class="ai_key_points">
-                <img src="./static/ai/intro/types_of_ai.jpeg" alt="image" style="padding-top: 60vh; padding-left: 2vw; padding-right: 1vw;">
+            <div class="media">
+                <img src="./static/ai/intro/ai_intro.jpeg" alt="ai image">
             </div>
         </div>
 
-    </div>
+            <div class="section">
+                <div class="content">
+                    <h3>1. Narrow A.I. </h3>
+                    <ul>
+                        <li><b>Definition: </b>AI systems designed and trained to handle a specific task or a narrow range of tasks.</li>
+                        <li><b>Capabilities: </b>Operates under predefined rules and cannot perform beyond its programmed limits.</li>
+                        <li><b>Examples: </b>Virtual assistants (e.g., Siri, Alexa), recommendation systems (e.g., Netflix suggestions), and image recognition software.</li>
+                        <li><b>Scope: </b>Limited to particular applications with no general understanding or awareness.</li>
+                        <li><b>Development: </b>Currently the most common type of AI, used in many everyday applications.</li>
+                    </ul>
+                </div>
+                <div class="media">
+                    <img src="./static/ai/intro/NarrowAI.jpg" alt="ai image" height="10px">
+                </div>
+            </div>
+            
+
+            <div class="section">
+                <div class="content">
+                    <h3>2. General A.I. </h3>
+                    <!-- start for it.....  -->
+                    <ul>
+                        <li><b>Definition: </b>AI systems with general cognitive abilities that can understand, learn, and apply knowledge across a broad range of tasks, similar to human intelligence.</li>
+                        <li><b>Capabilities: </b>Can perform any intellectual task that a human can, including reasoning, problem-solving, and understanding complex concepts.</li>
+                        <li><b>Examples: </b>ChatGpt, Gemini</li>
+                        <li><b>Scope:</b>Broad and adaptable, with the ability to transfer knowledge across different domains.</li>
+                        <li><b>Development:</b>Still under research, with no practical implementations as of now.</li>
+                    </ul>
+                </div>
+                <div class="media">
+                    <img src="./static/ai/intro/GeneralAI.jpg" alt="ai image">
+                </div>
+            </div>
 
 
-    <div class="tail mt-5">
-      <hr>
-        <footer class="text-gray-600 body-font">
-            <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-              <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                  </svg>
-                  <span class="ml-3 text-xl">Info</span>
-                </a>
-                <p class="mt-2 text-sm text-gray-500">about Learn and score</p>
-              </div>
-              <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                  <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">A.I.</h2>
-                  <nav class="list-none mb-10">
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800" href="/aiIntro">Ai intro</a>
-                    </li>
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800" href="/aiAlgo">A.I. Algo</a>
-                    </li>
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-                    </li>
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                    </li>
-                  </nav>
+            <div class="section">
+                <div class="content">
+                    <h3>3. Strong A.I. </h3>
+                    <!-- start for it.....  -->
+                    <ul>
+                        <li><b>Definition: </b>AI systems with consciousness, self-awareness, and understanding akin to human beings.</li>
+                        <li><b>Capabilities: </b>Can exhibit human-like understanding, reasoning, and emotional responses.</li>
+                        <li><b>Examples:</b>Hypothetical and not yet realized; often featured in science fiction.</li>
+                        <li><b>Scope:</b>Includes not only solving tasks but also possessing a level of self-awareness and subjective experience.</li>
+                        <li><b>Development:</b>An advanced concept still debated among researchers and philosophers, with no current technological realization.</li>
+                    </ul>
                 </div>
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                  <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                  <nav class="list-none mb-10">
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800">First Link</a>
-                    </li>
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-                    </li>
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-                    </li>
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                    </li>
-                  </nav>
+                <div class="media">
+                  <img src="./static/ai/intro/StrongAI.jpeg" alt="ai image">
                 </div>
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                  <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                  <nav class="list-none mb-10">
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800">First Link</a>
-                    </li>
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-                    </li>
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-                    </li>
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                    </li>
-                  </nav>
-                </div>
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                  <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                  <nav class="list-none mb-10">
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800">First Link</a>
-                    </li>
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-                    </li>
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-                    </li>
-                    <li>
-                      <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                    </li>
-                  </nav>
-                </div>
-              </div>
             </div>
-            <div class="bg-gray-100">
-              <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
-                  <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@knyttneve</a>
-                </p>
-                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-                  <a class="text-gray-500">
-                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                    </svg>
-                  </a>
-                  <a class="ml-3 text-gray-500">
-                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                    </svg>
-                  </a>
-                  <a class="ml-3 text-gray-500">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                    </svg>
-                  </a>
-                  <a class="ml-3 text-gray-500">
-                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-                      <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                    </svg>
-                  </a>
-                </span>
-              </div>
-            </div>
-          </footer>
     </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Learn and Score. <a href="#">Privacy</a></p>
+    </footer>
+
 </body>
+
 </html>
 
 {% endblock %}
