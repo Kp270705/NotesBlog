@@ -34,6 +34,14 @@ def ai_intro():
 def ai_algo():
     return render_template('ai/ai_algo.html')
 
+@app.route('/aiNlp')
+def ai_nlp():
+    return render_template('ai/ai_nlp.html')
+
+@app.route('/aiRnn_Cnn')
+def ai_rnn_cnn():
+    return render_template('ai/ai_rnn_cnn.html')
+
 
 # dbms routes:
 
