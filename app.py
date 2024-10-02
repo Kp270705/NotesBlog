@@ -53,6 +53,6 @@ def dbmsText():
 def dbms_intro():
     return render_template('dbms/dbms_introduction.html')
 
-@app.route('/dbmsIntro2')
+@app.route('/dbmsTypes')
 def dbms_types():
     return render_template('dbms/dbms_types.html')
