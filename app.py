@@ -55,4 +55,4 @@ def dbms_intro():
 
 @app.route('/dbmsIntro2')
 def dbms_types():
-    return render_template('dbms/dbms_introduction2.html')
+    return render_template('dbms/dbms_types.html')
