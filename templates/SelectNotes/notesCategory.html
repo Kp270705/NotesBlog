@@ -1,0 +1,108 @@
+{% extends "BaseFiles/base.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <style>
+        /* Card style adjustments */
+        .card {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            min-height: 300px; /* Minimum height to ensure equal heights */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space between items */
+            align-items: center; /* Center content horizontally */
+            padding: 20px; /* Add padding */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="home">
+        <section class="text-gray-600 body-font">
+            <div class="container mx-auto px-5 py-24">
+                <div class="flex flex-wrap justify-center gap-8">
+
+                    <!-- Text Notes Card -->
+                    <div class="p-4 w-full sm:w-1/2 lg:w-1/2 xl:w-1/3">
+                        <a class="text-indigo-500 inline-flex items-center" href="/selectText">
+                            <div class="card bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center">
+                                <h2 class="tracking-widest text-xs title-font font-medium mb-1">CATEGORY</h2>
+                                <h1 class="title-font sm:text-2xl text-xl font-medium mb-3">Text Notes</h1>
+                                <p class="leading-relaxed mb-3">Text-based notes, more than in PDFs.</p>
+                                <h2 class="title-font sm:text-lg text-lg font-small mb-3">Learn more</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- PDF Notes Card -->
+                    <div class="p-4 w-full sm:w-1/2 lg:w-1/2 xl:w-1/3">
+                        <a class="text-indigo-500 inline-flex items-center" href="/selectPdf">
+                            <div class="card bg-gradient-to-r from-green-400 to-blue-500 text-white text-center">
+                                <h2 class="tracking-widest text-xs title-font font-medium mb-1">CATEGORY</h2>
+                                <h1 class="title-font sm:text-2xl text-xl font-medium mb-3">PDF Notes</h1>
+                                <p class="leading-relaxed mb-3">Here you get human written handwritten notes in PDF form.</p>
+                                <h2 class="title-font sm:text-lg text-lg font-small mb-3">Learn more</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Additional Card Example -->
+                    <!-- <div class="p-4 w-full sm:w-1/2 lg:w-1/2 xl:w-1/3">
+                        <a class="text-indigo-500 inline-flex items-center" href="/selectAdditional">
+                            <div class="card bg-gradient-to-r from-purple-500 to-pink-500 text-white text-center">
+                                <h2 class="tracking-widest text-xs title-font font-medium mb-1">CATEGORY</h2>
+                                <h1 class="title-font sm:text-2xl text-xl font-medium mb-3">Additional Notes</h1>
+                                <p class="leading-relaxed mb-3">Additional resources for better learning.</p>
+                                <h2 class="title-font sm:text-lg text-lg font-small mb-3">Learn more</h2>
+                            </div>
+                        </a>
+                    </div> -->
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // GSAP Animation for cards
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".card", {
+            opacity: 0,
+            y: 50,
+            duration: 0.5,
+            stagger: 0.1,
+            scrollTrigger: {
+                trigger: ".home",
+                start: "top 80%",
+            }
+        });
+
+        // Additional hover effect
+        const cards = document.querySelectorAll(".card");
+        cards.forEach(card => {
+            card.addEventListener("mouseenter", () => {
+                gsap.to(card, { scale: 1.1, duration: 0.2, ease: "power1.inOut" });
+            });
+            card.addEventListener("mouseleave", () => {
+                gsap.to(card, { scale: 1, duration: 0.2, ease: "power1.inOut" });
+            });
+        });
+    </script>
+</body>
+</html>
+
+{% endblock %}

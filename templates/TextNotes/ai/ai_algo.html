@@ -1,0 +1,209 @@
+{% extends "BaseFiles/base.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS Overview</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            font-family: "Lora", serif;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1a202c;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 30px;
+            color: #2c5282;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .section .content {
+            width: 65%;
+        }
+
+        .section .media img {
+            max-width: 100%;
+            border-radius: 10px;
+            padding-top: 25vh;
+        }
+
+        .section .media {
+            width: 30%;
+            text-align: center;
+        }
+
+        .footer {
+            margin-top: 50px;
+            background-color: #1a202c;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #63b3ed;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1><u>Most Common Artificial Intelligence algorithms</u></h1>
+
+        <div class="section">
+            <div class="content">
+                <h2>1. Breadth First Search (B.F.S.):</h2>
+                <p>readth-First Search (BFS) is a graph traversal algorithm that explores all nodes at the present depth level before moving on to nodes at the next depth level. It systematically visits all nodes in a level-order fashion, using a queue to manage the nodes to be explored. BFS starts at the root node (or a chosen start node) and explores all its neighboring nodes before moving on to their neighbors, ensuring that all nodes at distance 𝑑 d from the start are visited before nodes at distance 𝑑 + 1 .</p>
+                
+                <h3>Use cases:</h3>
+                <ul>
+                    <li>Finding the shortest path in an unweighted graph.</li>
+                    <li>Solving puzzles like the 8-puzzle problem.</li>
+                    <li>Network broadcasting.</li>
+                </ul>
+
+                <h3>Advantages:</h3>
+                <ul>
+                    <li><b>Optimal for Unweighted Graphs: </b> AI involves creating intelligent agents or systems that can mimic human abilities.</li>
+                    <li><b>Complete:</b> Will always find a solution if one exists.</li>
+                    <li><b>Systematic:</b>Explores all nodes level by level</li>
+                </ul>
+
+                <h3>Disadvantages: </h3>
+                <ul>
+                    <li><b>Memory Intensive: </b>Can use a lot of memory due to storing all nodes at the current depth level.</li>
+                    <li><b>Slow for Large Graphs: </b>May be slower compared to other algorithms in large graphs.</li>
+                    <li><b>Not Ideal for Deep Graphs: </b>Can be inefficient if the solution is far from the root.</li>
+                </ul>
+            </div>
+
+            <div class="media">
+                <img src="./static/ai/algo/bfs.jpg" alt="BFS image">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="content">
+                <!-- <h2>2. DBMS vs File Systems</h2> -->
+                <h2>2. Depth First Search (D.F.S.):</h2>
+                <p>Depth-First Search (DFS) is a graph traversal algorithm that explores as far down a branch of the graph as possible before backtracking. It uses a stack (either explicitly or through recursion) to keep track of the path being explored. DFS starts at the root node (or a chosen start node) and explores as deep as possible along each branch before backtracking. This approach allows DFS to reach a node’s deepest descendant before moving to the next sibling node.</p>
+
+                <h3>Use cases:</h3>
+                <ul>
+                    <li>Pathfinding in mazes or puzzles.</li>
+                    <li>Topological sorting in directed graphs.</li>
+                    <li>Cycle detection in graphs.</li>
+                </ul>
+
+                <h3>Advantages:</h3>
+                <ul>
+                    <li><b>Low memory usage: </b>Uses less memory compared to BFS.</li>
+                    <li><b>Simple Implementation: </b>Easy to implement using recursion.</li>
+                    <li><b>Can be More Efficient: </b>Can be more efficient in certain scenarios, especially if the solution is deep.</li>
+                </ul>
+
+                <h3>Disadvantages:</h3>
+                <ul>
+                    <li><b>Not Optimal: </b>Does not guarantee the shortest path in unweighted graphs.</li>
+                    <li><b>Not complete: </b>May not find a solution if the graph is infinite.</li>
+                    <li><b>Can get stuck: </b>May get stuck in an infinite loop if the graph contains cycles and is not properly handled.</li>
+                </ul>
+
+            </div>
+            <div class="media">
+                <img src="./static/ai/algo/dfs.jpg" alt="DFS image">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="content">
+                <h2>3. A* Search(A-star Search):</h2>
+                
+                <p> The A* (A-star) search algorithm is an informed search algorithm that finds the shortest path from a start node to a goal node by combining the cost to reach the node (known as the path cost) and an estimate of the cost to reach the goal (known as the heuristic). A* uses a priority queue to explore nodes based on the sum of the path cost and heuristic value (often denoted as 
+                    𝑓(𝑛) = 𝑔(𝑛) + ℎ(𝑛) ) . It is designed to be both optimal and complete, provided that the heuristic function used is admissible (i.e., it never overestimates the true cost to reach the goal).</p>
+
+                    <h3 >Use Cases: </h3>
+                    <ul>
+                        <li>Pathfinding in maps (e.g., GPS navigation).</li>
+                        <li>Game AI for character movement.</li>
+                        <li>Robotics and autonomous systems.</li>
+                    </ul>
+
+
+                    <h3>Advantages: </h3>
+                <ul>
+                    <li><b>Optimal and Complete: </b>If the heuristic is admissible, it guarantees the shortest path.</li>
+                    <li><b>Heuristic Optimization: </b>Uses heuristics to efficiently find the path.</li>
+                    <li><b>Flexible: </b>Can be adapted with different heuristics for various problems.</li>
+                </ul>
+
+                <h3>Disadvantages: </h3>
+                <ul>
+                    <li><b>Memory Usage: </b>Can use a lot of memory due to maintaining the open and closed lists.</li>
+                    <li><b>Heuristic Dependent: </b>Performance depends on the quality of the heuristic.</li>
+                    <li><b>Complexity: </b>More complex to implement compared to BFS and DFS.</li>
+                </ul>
+                
+            </div>
+            <div class="media">
+                <img src="./static/ai/algo/a_star.png" alt="A* image">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Learn and Score. <a href="#">Privacy</a></p>
+    </footer>
+
+</body>
+
+</html>
+
+{% endblock %}
