@@ -1,0 +1,202 @@
+{% extends "BaseFiles/base.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS Overview</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+          
+        h1, h2, h3 {
+            font-family: "Lora", serif;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1a202c;
+            margin-bottom: 20px;
+            white-space: normal;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-top: 30px;
+            color: #2c5282;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin: 10px 0;
+        }
+        li{
+            margin-top: 10px;
+        }
+        
+        .section{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10vh;
+            text-align: justify;
+        }
+        .section:hover, .content:hover, .media:hover {
+            scale: 1.02;
+            color: rgb(96, 60, 60);
+            transition: transform 0.9s, margin-bottom 0.5s;
+
+        }
+
+        .section .content {
+            width: 65%;
+            line-height: 30px;
+        }
+
+        .section .media img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            padding-top: 10vh;
+        }
+        img{
+            height: 300px;
+            width: 300px;
+        }
+
+        .section .media {
+            width: 30%;
+            text-align: center;
+        }
+
+        .footer {
+            margin-top: 50px;
+            background-color: #1a202c;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #63b3ed;
+        }
+
+        .container {
+            max-width: 100%;
+            padding: 20px 20px 20px 60px;
+            overflow-x: hidden; 
+        }
+
+        @media (max-width: 768px) {
+
+            /* Maintain content and media adjustments */
+            .section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section .content {
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .section .media {
+                width: 100%;
+                padding-top: 20px; 
+                text-align: center;
+            }
+
+            .section .media img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+
+    </style>
+    
+</head>
+
+<body>
+
+    <div class="container">
+        <h1><u>Introduction to Database Management Systems (D.B.M.S.)</u></h1>
+
+        <div class="section">
+            <div class="content">
+                <h2>1. What is D.B.M.S.?</h2>
+                <p>A Database Management System (DBMS) is software used to store, manage, and retrieve data efficiently. It organizes data in a way that it can be easily accessed, manipulated, and updated.</p>
+                
+                <h3>Types of Databases</h3>
+                <ul>
+                    <li><b>Relational Databases:</b> Data is stored in tables (e.g., MySQL, PostgreSQL). Relationships between tables are defined using keys.</li>
+                    <li><b>NoSQL Databases:</b> Handles unstructured data (e.g., MongoDB) and is more flexible in dealing with large volumes of data.</li>
+                </ul>
+            </div>
+            <div class="media">
+                <!-- <img src="./static/dbms/intro/db1.webp" loading="lazy" alt="DBMS"> -->
+                <img src="./static/dbms/intro/db2.jpg" loading="lazy" alt="DBMS">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="content">
+                <h2>2. DBMS vs File Systems</h2>
+                <p>DBMS provides features like reduced data redundancy, data consistency, and enhanced security compared to traditional file systems.</p>
+
+                <h3>Database Architecture</h3>
+                <ul>
+                    <li><b>1-Tier:</b> All tasks handled on a single machine (centralized).</li>
+                    <li><b>2-Tier:</b> Client-server architecture.</li>
+                    <li><b>3-Tier:</b> Application layer added between client and server.</li>
+                </ul>
+            </div>
+            <div class="media">
+                <!-- <img src="./static/dbms/intro/fs.jpg" loading="lazy" alt="File Systems"> -->
+                <img src="./static/dbms/intro/file1.jpg" loading="lazy" alt="File Systems">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="content">
+                <h2>3. SQL and Basic Operations</h2>
+                <p><b>SQL:</b> Structured Query Language is used to interact with databases. It includes:</p>
+                <ul>
+                    <li><b>DDL (Data Definition Language):</b> For defining the structure (CREATE, ALTER).</li>
+                    <li><b>DML (Data Manipulation Language):</b> For data manipulation (SELECT, INSERT, UPDATE, DELETE).</li>
+                </ul>
+            </div>
+            <div class="media">
+                <!-- <img src="./static/dbms/intro/sql.avif" loading="lazy" alt="SQL Operations"> -->
+                <!-- <img src="./static/dbms/intro/sql1.jpg" loading="lazy" alt="SQL Operations"> -->
+                <!-- <img src="./static/dbms/intro/sql2.png" loading="lazy" alt="SQL Operations"> -->
+                <img src="./static/dbms/intro/sql3.jpg" loading="lazy" alt="SQL Operations">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Learn and Score. <a href="#">Privacy</a></p>
+    </footer>
+
+</body>
+
+</html>
+
+{% endblock %}

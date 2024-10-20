@@ -1,0 +1,70 @@
+{% extends "BaseFiles/base.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn and Score</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <div class="container mx-auto px-4 py-8">
+        
+        <header class="mb-6">
+            <h1 class="text-center text-4xl font-bold mb-4">Learn and Score</h1>
+        </header>
+        
+        <!-- Cards Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="card bg-gradient-to-r from-green-400 to-blue-600 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <a href="{{ url_for('dbms_intro') }}">
+                <img src="./static/dbms/select/dbintro.webp" loading="lazy" alt="db Image" class="w-1/2 mx-auto mb-4">
+                <h2 class="text-center text-white text-2xl font-semibold">Introduction of D.B.M.S. </h2>
+                <p class="text-center text-white mt-2">Basic introduction, definition and types of DBMS
+                    DBMS vs File system, SQL basic operations.</p>
+            </a>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="card bg-gradient-to-r from-yellow-400 to-red-500 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <a href="{{ url_for('dbms_types') }}">
+                <img src="./static/dbms/select/dbtypes.webp" loading="lazy" alt="db Image" class="w-1/2 mx-auto mb-4">
+                <h2 class="text-center text-white text-2xl font-semibold">Types of D.B.M.S.</h2>
+                <p class="text-center text-white mt-2">Types of D.B.M.S. e.g. R.D.B.M.S. , No-SQL Databases. and 
+                    algorithm </p>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <!-- <div class="card bg-gradient-to-r from-purple-400 to-pink-500 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <a href="{{ url_for('ai_rnn_cnn') }}">
+                <img src="./static/ai/select/rnn_cnn.jpg" alt="AI Image" class="w-1/2 mx-auto mb-4">
+                <h2 class="text-center text-white text-2xl font-semibold">RNN vs CNN</h2>
+                <p class="text-center text-white mt-2">Differs b/w RNN and CNN</p>
+                </a>
+            </div> -->
+
+            <!-- Card 4 -->
+            <!-- <div class="card bg-gradient-to-r from-green-400 to-blue-600 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <a href="{{ url_for('ai_nlp') }}">
+                <img src="./static/ai/select/nlp.jpg" alt="DBMS Image" class="w-1/2 mx-auto mb-4">
+                <h2 class="text-center text-white text-2xl font-semibold">N.L.P.</h2>
+                <p class="text-center text-white mt-2">Define NLP, popular Applications using it, working of NLP.</p>
+                </a>
+            </div> -->
+
+            <!-- Card 5: -->
+            <!-- coming soon...  -->
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+{% endblock %}
